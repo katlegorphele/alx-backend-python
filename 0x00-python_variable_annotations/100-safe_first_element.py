@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-'''
+"""
 Complex types - mixed list
-'''
+"""
 
 from typing import Any, Union, Sequence
 

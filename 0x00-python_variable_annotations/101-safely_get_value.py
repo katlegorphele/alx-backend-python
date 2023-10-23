@@ -10,12 +10,16 @@ the function def safely_get_value(dct, key, default = None):
 
 """
 
-from typing import Mapping, Any, Union
+from typing import Mapping, Any, Union, TypeVar
+
+T = TypeVar('T')
+NoneType = TypeVar('NoneType', None, None)
+R = Union[Any, T]
+D = Union[T, None]
 
 
 def safely_get_value(
-    dct: Mapping, key: Any, default: Union[Any, None] = None
-) -> Union[Any, None]:
+    dct: Mapping, key: Any, default: D) -> R:
     """
     Returns a value from a dictionary or the default
     """
